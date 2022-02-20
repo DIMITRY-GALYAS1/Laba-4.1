@@ -23,19 +23,18 @@ class Myclass:
         self.second = float(second)
 
     def display(self):
-        print("Вы хотите получить число {0} в "
-              "степени {1}".format(self.first, self.second))
+        print("Ответ - ", make_power(self))
 
-    def make_power(self):
-        if self.first == 0:
-            raise ValueError()
-        else:
-            k = self.first ** self.second
-            print("Ответ - ", k)
+
+def make_power(self):
+    if self.first == 0:
+        raise ValueError()
+    else:
+        k = self.first ** self.second
+        return k
 
 
 if __name__ == '__main__':
     test = Myclass()
     test.read()
     test.display()
-    test.make_power()

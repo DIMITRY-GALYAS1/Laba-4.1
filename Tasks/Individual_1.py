@@ -23,14 +23,14 @@ class Myclass:
         self.second = float(second)
 
     def display(self):
-        print("Ответ - ", make_power(self))
+        print("Ответ - ", make_power(self.first, self.second))
 
 
-def make_power(self):
-    if self.first == 0:
+def make_power(first, second):
+    if first == 0:
         raise ValueError()
     else:
-        k = self.first ** self.second
+        k = first ** second
         return k
 
 
